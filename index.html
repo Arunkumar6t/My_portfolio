@@ -1,118 +1,107 @@
 <!DOCTYPE html>
-<!--  Ensure dark mode loads correctly based on your preference/JS logic  -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arunkumar Thirumalaivasan - Portfolio</title>
-
-  <!--  Google Fonts  -->
+  <!-- Google Fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
-  <!--  Font Awesome Icons  -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!--  Your Stylesheet  -->
+  <!-- Your Stylesheet-->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!--  -- Sticky Navbar --  -->
+  <!-- Sticky Navbar -->
   <header class="navbar">
     <div class="container nav-container">
-      <!--  Logo  -->
-      <a href="#" class="logo">Arunkumar</a>
-
-      <!--  Mobile Nav Toggle  -->
+      <a href="#" class="logo">Arunkumar Portfolio</a>
       <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
         <i class="fas fa-bars"></i>
       </button>
-
-      <!--  Desktop Navigation  -->
       <nav>
-        <ul class="nav-menu">
+        <ul class="nav-menu"> <!-- Ensured no list style in CSS-->
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#education">Education</a></li>
+          <li><a href="#contact-footer">Contact</a></li>
         </ul>
       </nav>
-
-      <!--  Right-side Actions (Resume & Theme Toggle)  -->
-      <div class="nav-actions">
-          <button id="open-resume-modal" class="btn btn-secondary nav-resume-btn">Resume</button>
-          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
-              <i class="fas fa-sun"></i> <!--  Shows in dark mode  -->
-              <i class="fas fa-moon"></i> <!--  Shows in light mode  -->
-          </button>
-      </div>
+      <!-- Theme Toggle Removed-->
     </div>
   </header>
 
-  <!--  -- Main Content Area --  -->
+  <!-- -- Main Content Area ---->
   <main>
 
-    <!--  Hero / About Section  -->
+    <!-- Hero / About Section-->
     <section id="about" class="hero section-padding">
       <div class="container hero-content">
         <div class="hero-text">
+          <p class="hero-intro">Hello, It's Me</p>
           <h1>Arunkumar Thirumalaivasan</h1>
-          <h2>AWS and DevOps Engineer</h2>
-          <p>
-            Passionate and detail-oriented AWS and DevOps Engineer with a strong foundation in cloud computing, automation, and IT support. Proactive problem solver with expertise in AWS services, CI/CD pipelines, infrastructure as code, and system administration. Committed to optimizing performance, enhancing security, and driving innovation in IT environments. Seeking to contribute technical expertise and analytical skills to a forward-thinking organization.
+          <h2 class="hero-subtitle">And I'm an <span id="typing-effect">AWS and DevOps Engineer</span></h2>
+          <p class="hero-description">
+            Passionate and detail-oriented, committed to optimizing performance, enhancing security, and driving innovation in IT environments. Seeking to contribute technical expertise and analytical skills to a forward-thinking organization.
           </p>
+          <div class="hero-actions">
+            <div class="hero-contact-icons">
+              <a href="mailto:arunkumarthirumalaivasan@gmail.com" aria-label="Email" class="contact-icon-btn"><i class="fas fa-envelope"></i></a>
+              <a href="https://linkedin.com/in/arunkumar6t" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="contact-icon-btn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/arunkumar6t" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="contact-icon-btn"><i class="fab fa-github"></i></a>
+              <a href="tel:+919629630429" aria-label="Phone" class="contact-icon-btn"><i class="fas fa-phone"></i></a>
+            </div>
+            <a href="Arunkumar_Thirumalaivasan_Resume.pdf" download="Arunkumar_Thirumalaivasan_Resume.pdf" class="btn btn-primary hero-resume-btn">
+              Download Resume
+            </a>
+          </div>
         </div>
         <div class="hero-image-container">
-            <!--  Check CSS for background-image path: url('images/profile.jpg')  -->
             <div id="profile-pic" class="profile-pic" aria-label="Profile picture of Arunkumar Thirumalaivasan"></div>
-            <div class="profile-pic-overlay"></div> <!--  For preventing right-click/drag  -->
+            <div class="profile-pic-overlay"></div>
         </div>
       </div>
     </section>
 
-    <!--  Skills Section  -->
+    <!-- Skills Section-->
     <section id="skills" class="section-padding skills-section">
         <div class="container">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
               <div class="skill-category">
                 <h3><i class="fab fa-aws"></i> AWS</h3>
-                <ul class="skill-list">
+                <ul class="skill-list"> <!-- Ensured no list style in CSS-->
                   <li>EC2</li><li>EBS</li><li>VPC</li><li>Subnetting</li><li>IP address</li><li>ELB</li><li>S3</li><li>Snapshot</li><li>RDS</li><li>DynamoDB</li><li>AMI</li><li>Autoscaling</li><li>SNS</li><li>CloudWatch</li><li>EFS</li>
                 </ul>
               </div>
               <div class="skill-category">
                 <h3><i class="fas fa-cogs"></i> DevOps</h3>
-                 <ul class="skill-list">
+                 <ul class="skill-list"> <!-- Ensured no list style in CSS-->
                    <li>CI/CD</li><li>Git</li><li>GitHub</li><li>Jenkins</li><li>Terraform</li><li>Ansible</li><li>Docker</li><li>Kubernetes</li>
                  </ul>
               </div>
               <div class="skill-category">
                 <h3><i class="fas fa-server"></i> System Administration</h3>
-                 <ul class="skill-list">
+                 <ul class="skill-list"> <!-- Ensured no list style in CSS-->
                    <li>Linux</li><li>Windows Server</li><li>Virtualization</li><li>Hardware Installation</li>
                  </ul>
               </div>
               <div class="skill-category">
                 <h3><i class="fas fa-file-alt"></i> Microsoft Office</h3>
-                 <ul class="skill-list">
+                 <ul class="skill-list"> <!-- Ensured no list style in CSS-->
                    <li>Word</li><li>Excel</li><li>PowerPoint</li>
-                 </ul>
-              </div>
-              <div class="skill-category">
-                <h3><i class="fas fa-language"></i> Languages</h3>
-                 <ul class="skill-list">
-                   <li>English</li><li>Tamil</li>
                  </ul>
               </div>
             </div>
           </div>
     </section>
 
-    <!--  Internship/Experience Section  -->
+    <!-- Internship/Experience Section-->
     <section id="experience" class="section-padding experience-section">
        <div class="container">
             <h2>Internship Experience</h2>
@@ -122,115 +111,69 @@
                         <span class="timeline-date">01/2024 - 02/2024</span>
                         <h3>IT Support Intern</h3>
                         <h4>Integra Software Services <span class="location"> - Puducherry</span></h4>
-                        <ul>
+                        <ul> <!-- Ensured no list style in CSS-->
                             <li>Provided technical support for hardware and software issues.</li>
                             <li>Gained hands-on experience in system administration and networking.</li>
                             <li>Worked with basic AWS services such as EC2, S3, and IAM.</li>
                         </ul>
                     </div>
                 </div>
-                <!--  Add more timeline items here if needed  -->
             </div>
         </div>
     </section>
 
-    <!--  Projects Section  -->
+    <!-- Projects Section-->
     <section id="projects" class="section-padding projects-section">
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
                <div class="card project-card">
                  <h3>Design and Verification of APB Protocol Using UVM</h3>
-                 <p>During my final year of engineering, I designed and verified the Advanced Peripheral Bus (APB) protocol, a critical component of on-chip communication. Utilizing the Universal Verification Methodology (UVM), I developed a comprehensive test environment comprising a sequencer, driver, and monitor to ensure thorough validation of APB functionality. This project enhanced my expertise in digital design, functional verification, and industry-standard methodologies for protocol validation.</p>
-                 <a href="https://github.com/Arunkumar6t/APB-protocol.git" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"> 
-                  <i class="fab fa-github"></i> View on GitHub
-               </a>
-                 <!--  Optional: <a href="#" class="btn btn-secondary">View Project</a>  -->
+                 <p>During my final year of engineering, I designed and verified the Advanced Peripheral Bus (APB) protocol...</p>
+                 <a href="https://github.com/arunkumar6t/APB-protocol-UVM" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View on GitHub
+                 </a>
                </div>
-               <!--  Add more project cards here if needed  -->
             </div>
           </div>
     </section>
 
-    <!--  Education Section  -->
+    <!-- Education Section-->
     <section id="education" class="section-padding education-section">
         <div class="container">
             <h2>Education</h2>
             <div class="timeline">
                  <div class="timeline-item">
-                    <div class="timeline-content card">
-                        <span class="timeline-date">2024</span>
-                        <h3>Bachelor of Engineering - Electronics and Communication</h3>
-                        <h4>Annamalai University</h4>
-                        <p>Result: 81.5% with Distinction</p>
-                    </div>
+                    <div class="timeline-content card"><span class="timeline-date">2024</span><h3>Bachelor of Engineering - Electronics and Communication</h3><h4>Annamalai University</h4><p>Result: 81.5% with Distinction</p></div>
                 </div>
                  <div class="timeline-item">
-                    <div class="timeline-content card">
-                        <span class="timeline-date">2020</span>
-                        <h3>Class 12th</h3>
-                        <h4>Lakshmi Chordia Memorial Matric. Hr. Sec. School</h4>
-                         <p>Result: 61%</p>
-                    </div>
+                    <div class="timeline-content card"><span class="timeline-date">2020</span><h3>Class 12th</h3><h4>Lakshmi Chordia Memorial Matric. Hr. Sec. School</h4><p>Result: 61%</p></div>
                 </div>
                  <div class="timeline-item">
-                    <div class="timeline-content card">
-                        <span class="timeline-date">2018</span>
-                        <h3>Class 10th</h3>
-                        <h4>Lakshmi Chordia Memorial Matric. Hr. Sec. School</h4>
-                        <p>Result: 71%</p>
-                    </div>
+                    <div class="timeline-content card"><span class="timeline-date">2018</span><h3>Class 10th</h3><h4>Lakshmi Chordia Memorial Matric. Hr. Sec. School</h4><p>Result: 71%</p></div>
                 </div>
             </div>
         </div>
     </section>
-
   </main>
 
-  <!--  -- Footer --  -->
-  <footer class="footer">
+  <!-- -- Footer ---->
+  <footer class="footer" id="contact-footer">
     <div class="container">
-      <!--  Footer Title  -->
-      <h4 class="footer-title">Contact Me</h4>
-
-      <!--  Footer Contact Links  -->
+      <h4 class="footer-title">Get In Touch</h4>
       <div class="footer-contact-links">
         <a href="mailto:arunkumarthirumalaivasan@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> arunkumarthirumalaivasan@gmail.com</a>
+        <a href="https://linkedin.com/in/arunkumar6t" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        <a href="https://github.com/arunkumar6t" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
         <a href="tel:+919629630429" aria-label="Phone"><i class="fas fa-phone"></i> +91 9629630429</a>
-        <a href="https://linkedin.com/in/arunkumar6t" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> linkedin.com/in/arunkumar6t</a>
         <span><i class="fas fa-map-marker-alt"></i> Cuddalore, TN, India</span>
       </div>
-
-      <!--  Copyright Notice  -->
       <p class="copyright">&copy; <span id="current-year"></span> Arunkumar Thirumalaivasan. All rights reserved.</p>
     </div>
   </footer>
 
-  <!--  -- Resume Download Modal --  -->
-  <div id="resume-modal" class="modal">
-       <div class="modal-content card">
-        <span id="close-modal" class="close-btn">&times;</span>
-        <h3>Download Resume</h3>
-        <p>Please enter your name and company to download the resume.</p>
-        <form id="resume-download-form">
-          <div class="form-group">
-            <label for="downloader-name">Name:</label>
-            <input type="text" id="downloader-name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="downloader-company">Company:</label>
-            <input type="text" id="downloader-company" name="company" required>
-          </div>
-           <!--  --- IMPORTANT: Check your PDF file path ---  -->
-           <a href="Arunkumar_Thirumalaivasan_Resume.pdf" download="Arunkumar_Thirumalaivasan_Resume.pdf" id="actual-download-link" class="btn btn-primary btn-download-resume" style="display: none;">Download Now</a>
-           <!--  --- Ensure 'resume' folder exists and PDF file is inside ---  -->
-          <button type="submit" class="btn btn-primary">Submit to Download</button>
-        </form>
-      </div>
-  </div>
+  <!-- Modal Removed-->
 
-  <!--  -- Link to JavaScript File --  -->
   <script src="script.js"></script>
-
 </body>
 </html>
